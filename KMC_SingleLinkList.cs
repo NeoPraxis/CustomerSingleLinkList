@@ -126,6 +126,55 @@ namespace CustomerSingleLinkList
 
             }
         }
+
+        /// <summary>
+        /// This will delete the first node in the list no matter the value
+        /// </summary>
+        public void DeleteFirst()
+        {
+            if (this.Top != null)
+            {
+                // If Top is not null, create
+                // a temp node pointing to Top
+                KMC_Node temp = this.Top;
+
+                // Move Top to Next of Top
+                this.Top = this.Top.Next;
+
+                // Delete temp node
+                temp = null;
+            }
+
+
+        }
+        /// <summary>
+        /// This will delete the last node with any value in the link list
+        /// </summary>
+        public void DeleteLast()
+        {
+            if (this.Top.Next == null)
+            {
+                this.Top = null;
+            }
+            else
+            {
+                KMC_Node temp;
+
+                temp = this.Top;
+
+                while (temp.Next.Next != null)
+                    temp = temp.Next;
+
+                KMC_Node lastNode = temp.Next;
+
+                temp.Next = null;
+
+                lastNode = null;
+
+            }
+        }
+
+        
         #endregion methods
 
     }

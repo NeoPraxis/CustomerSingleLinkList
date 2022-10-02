@@ -52,7 +52,7 @@
             // textBoxCustomer
             // 
             this.textBoxCustomer.Location = new System.Drawing.Point(146, 37);
-            this.textBoxCustomer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxCustomer.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxCustomer.Name = "textBoxCustomer";
             this.textBoxCustomer.Size = new System.Drawing.Size(196, 31);
             this.textBoxCustomer.TabIndex = 1;
@@ -60,7 +60,7 @@
             // buttonAddBegin
             // 
             this.buttonAddBegin.Location = new System.Drawing.Point(358, 33);
-            this.buttonAddBegin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonAddBegin.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAddBegin.Name = "buttonAddBegin";
             this.buttonAddBegin.Size = new System.Drawing.Size(150, 44);
             this.buttonAddBegin.TabIndex = 2;
@@ -71,7 +71,7 @@
             // buttonAddEnd
             // 
             this.buttonAddEnd.Location = new System.Drawing.Point(520, 33);
-            this.buttonAddEnd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonAddEnd.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAddEnd.Name = "buttonAddEnd";
             this.buttonAddEnd.Size = new System.Drawing.Size(150, 44);
             this.buttonAddEnd.TabIndex = 3;
@@ -96,7 +96,7 @@
             this.listBoxCustomerList.FormattingEnabled = true;
             this.listBoxCustomerList.ItemHeight = 25;
             this.listBoxCustomerList.Location = new System.Drawing.Point(26, 215);
-            this.listBoxCustomerList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listBoxCustomerList.Margin = new System.Windows.Forms.Padding(6);
             this.listBoxCustomerList.Name = "listBoxCustomerList";
             this.listBoxCustomerList.Size = new System.Drawing.Size(1546, 629);
             this.listBoxCustomerList.TabIndex = 5;
@@ -114,7 +114,7 @@
             // textBoxPosition
             // 
             this.textBoxPosition.Location = new System.Drawing.Point(864, 37);
-            this.textBoxPosition.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBoxPosition.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxPosition.Name = "textBoxPosition";
             this.textBoxPosition.Size = new System.Drawing.Size(196, 31);
             this.textBoxPosition.TabIndex = 7;
@@ -122,7 +122,7 @@
             // buttonAddPosition
             // 
             this.buttonAddPosition.Location = new System.Drawing.Point(1076, 33);
-            this.buttonAddPosition.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonAddPosition.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAddPosition.Name = "buttonAddPosition";
             this.buttonAddPosition.Size = new System.Drawing.Size(150, 44);
             this.buttonAddPosition.TabIndex = 8;
@@ -137,6 +137,7 @@
             this.buttonDeleteFirst.TabIndex = 9;
             this.buttonDeleteFirst.Text = "Delete First";
             this.buttonDeleteFirst.UseVisualStyleBackColor = true;
+            this.buttonDeleteFirst.Click += new System.EventHandler(this.buttonDeleteFirst_Click);
             // 
             // buttonDeleteLast
             // 
@@ -146,6 +147,7 @@
             this.buttonDeleteLast.TabIndex = 10;
             this.buttonDeleteLast.Text = "Delete Last";
             this.buttonDeleteLast.UseVisualStyleBackColor = true;
+            this.buttonDeleteLast.Click += new System.EventHandler(this.buttonDeleteLast_Click);
             // 
             // label1
             // 
@@ -194,7 +196,7 @@
             this.Controls.Add(this.buttonAddBegin);
             this.Controls.Add(this.textBoxCustomer);
             this.Controls.Add(this.labelCustomer);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormCustomerSingleLinkList";
             this.Text = "Customer Single Link List Demo";
             this.ResumeLayout(false);

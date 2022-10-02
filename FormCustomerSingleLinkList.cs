@@ -15,6 +15,12 @@
  * 0.1   KMC 09/21/2022 - initial writing
  * 0.2   KMC 09/26/2022 - added UI
  *                      - code Add Begin button
+ * 0.3  KMC 10/01/2022  - added DeleteFirst button
+ *                      - added DeleteLast button
+ *                      - added DeleteByName button
+ *                      - added count
+ *                      - added count by traversal
+ *                      - *** NOTICE WE DID NOT DO ADD AT END IN CLASS YET ***
  * *******************************************************************/
 using System;
 using System.Windows.Forms;
@@ -39,6 +45,8 @@ namespace CustomerSingleLinkList
         #endregion constructor
 
         #region events
+
+       
         /// <summary>
         /// This routine will read the Customer name from the form 
         /// and add it to the link list.
@@ -54,6 +62,26 @@ namespace CustomerSingleLinkList
             CustomerList.AddAtBeginning(customerName);
 
             // display the customer list
+            DisplayCustomerList(listBoxCustomerList);
+        }
+        /// <summary>
+        /// This button deletes any first element in the link list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonDeleteFirst_Click(object sender, EventArgs e)
+        {
+            CustomerList.DeleteFirst();
+            DisplayCustomerList(listBoxCustomerList);
+        }
+        /// <summary>
+        /// This button deletes any last element in the link list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonDeleteLast_Click(object sender, EventArgs e)
+        {
+            CustomerList.DeleteLast();
             DisplayCustomerList(listBoxCustomerList);
         }
         #endregion events
@@ -84,5 +112,6 @@ namespace CustomerSingleLinkList
         }
         #endregion methods
 
+       
     }
 }
