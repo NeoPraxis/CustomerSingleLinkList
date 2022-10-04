@@ -36,7 +36,7 @@ namespace CustomerSingleLinkList
 
         #region properties
         public KMC_Node Top { get; set; }    // pointer top of link list
-        
+
         public int count;                    // will count nodes
         #endregion properties
 
@@ -102,7 +102,7 @@ namespace CustomerSingleLinkList
         /// </summary>
         /// <param name="lastname"></param>
         /// <param name="position"></param>
-        
+
         // we did not finish this in class *********************************************
         public void AddAtPosition(String lastname, int position)
         {
