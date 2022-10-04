@@ -108,7 +108,10 @@ namespace CustomerSingleLinkList
                 // move to the next customer
                 current = current.Next;
             }
-
+            String stringCount = String.Format("Count by Traversal: {0}", CustomerList.CountByTraversal());
+            thisListBox.Items.Add(stringCount);
+            String count = String.Format("Count: {0}", CustomerList.count);
+            thisListBox.Items.Add(count);
         }
         #endregion methods
 
