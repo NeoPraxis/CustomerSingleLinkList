@@ -208,6 +208,21 @@ namespace CustomerSingleLinkList
                 nodeToDelete = nodeToDelete.Next;
             }
         }
+        /// <summary>
+        /// This method counts by traversing the list
+        /// </summary>
+        /// <returns></returns>
+        public int CountByTraversal()
+        {
+            int nodeCount = 0;
+            KMC_Node currentNode = Top;
+            while (currentNode != null)
+            {
+                nodeCount++;
+                currentNode = currentNode.Next;
+            }
+            return nodeCount;
+        }
 
         #endregion methods
         #region private methods
