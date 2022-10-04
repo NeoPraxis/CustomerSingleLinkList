@@ -36,12 +36,15 @@ namespace CustomerSingleLinkList
 
         #region properties
         public KMC_Node Top { get; set; }    // pointer top of link list
+        
+        public int count;                    // will count nodes
         #endregion properties
 
         #region constructor
         public KMC_SingleLinkList()
         {
             Top = null;
+            count = 0;
         }
         #endregion constructor
 
@@ -60,6 +63,7 @@ namespace CustomerSingleLinkList
             // add the cutomer to the front of the list
             customer.Next = Top;
             Top = customer;
+            count++;
         }
 
         /// <summary>
@@ -88,6 +92,7 @@ namespace CustomerSingleLinkList
                 // found the end, insert here
                 current.Next = customer;
             }
+            count++;
         }
 
         /// <summary>
@@ -97,10 +102,12 @@ namespace CustomerSingleLinkList
         /// </summary>
         /// <param name="lastname"></param>
         /// <param name="position"></param>
+        
+        // we did not finish this in class *********************************************
         public void AddAtPosition(String lastname, int position)
         {
             KMC_Node current, previous;
-            int count;
+            //int count;
 
             // create the customer
             KMC_Node customer = new KMC_Node(lastname);
@@ -150,6 +157,7 @@ namespace CustomerSingleLinkList
             }
             // uses the delete method to delete the top-most node, and check for next
             DeleteNode(Top, null);
+            count--;
         }
         /// <summary>
         /// This will delete the last node with any value in the link list
@@ -170,6 +178,7 @@ namespace CustomerSingleLinkList
                 nodeToDelete = nodeToDelete.Next;
             }
             DeleteNode(nodeToDelete, previous);
+            count--;
         }
         /// <summary>
         /// This will delete a customer by the name given by user
@@ -192,6 +201,7 @@ namespace CustomerSingleLinkList
                 if (nodeToDelete.LastName == lastname)
                 {
                     DeleteNode(nodeToDelete, previous);
+                    count--;
                     break;
                 }
                 previous = nodeToDelete;
