@@ -21,6 +21,7 @@
  *                      - added count
  *                      - added count by traversal
  *                      - *** NOTICE WE DID NOT DO ADD AT END IN CLASS YET ***
+ *0.4   KMC 10/03/2022  - added add at end button
  * *******************************************************************/
 using System;
 using System.Windows.Forms;
@@ -65,6 +66,19 @@ namespace CustomerSingleLinkList
             DisplayCustomerList(listBoxCustomerList);
         }
         /// <summary>
+        /// This will read the customer name from the form, and add it to the link list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonAddEnd_Click(object sender, EventArgs e)
+        {
+            String customerName = textBoxCustomer.Text.Trim();
+
+            CustomerList.AddAtEnd(customerName);
+
+            DisplayCustomerList(listBoxCustomerList);
+        }
+        /// <summary>
         /// This button deletes any first element in the link list
         /// </summary>
         /// <param name="sender"></param>
@@ -84,6 +98,12 @@ namespace CustomerSingleLinkList
             CustomerList.DeleteLast();
             DisplayCustomerList(listBoxCustomerList);
         }
+        private void buttonDeleteByName_Click(object sender, EventArgs e)
+        {
+            String customerName = textBoxDeleteByName.Text.Trim();
+            CustomerList.DeleteByName(customerName);
+            DisplayCustomerList(listBoxCustomerList);
+        }
         #endregion events
 
         #region methods
@@ -100,6 +120,7 @@ namespace CustomerSingleLinkList
             // displaying each item in the listbox
             // this is the wrong way to do this!!!
             KMC_Node current = CustomerList.Top;
+            
             // while there is more data
             while (current != null)
             {
@@ -107,11 +128,14 @@ namespace CustomerSingleLinkList
                 thisListBox.Items.Add(current.LastName);
                 // move to the next customer
                 current = current.Next;
+                
             }
 
         }
+
+
         #endregion methods
 
-       
+        
     }
 }

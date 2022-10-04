@@ -42,27 +42,24 @@
             // labelCustomer
             // 
             this.labelCustomer.AutoSize = true;
-            this.labelCustomer.Location = new System.Drawing.Point(26, 42);
-            this.labelCustomer.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelCustomer.Location = new System.Drawing.Point(13, 22);
             this.labelCustomer.Name = "labelCustomer";
-            this.labelCustomer.Size = new System.Drawing.Size(110, 25);
+            this.labelCustomer.Size = new System.Drawing.Size(54, 13);
             this.labelCustomer.TabIndex = 0;
             this.labelCustomer.Text = "Customer:";
             // 
             // textBoxCustomer
             // 
-            this.textBoxCustomer.Location = new System.Drawing.Point(146, 37);
-            this.textBoxCustomer.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxCustomer.Location = new System.Drawing.Point(73, 19);
             this.textBoxCustomer.Name = "textBoxCustomer";
-            this.textBoxCustomer.Size = new System.Drawing.Size(196, 31);
+            this.textBoxCustomer.Size = new System.Drawing.Size(100, 20);
             this.textBoxCustomer.TabIndex = 1;
             // 
             // buttonAddBegin
             // 
-            this.buttonAddBegin.Location = new System.Drawing.Point(358, 33);
-            this.buttonAddBegin.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonAddBegin.Location = new System.Drawing.Point(179, 17);
             this.buttonAddBegin.Name = "buttonAddBegin";
-            this.buttonAddBegin.Size = new System.Drawing.Size(150, 44);
+            this.buttonAddBegin.Size = new System.Drawing.Size(75, 23);
             this.buttonAddBegin.TabIndex = 2;
             this.buttonAddBegin.Text = "Add Begin";
             this.buttonAddBegin.UseVisualStyleBackColor = true;
@@ -70,21 +67,20 @@
             // 
             // buttonAddEnd
             // 
-            this.buttonAddEnd.Location = new System.Drawing.Point(520, 33);
-            this.buttonAddEnd.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonAddEnd.Location = new System.Drawing.Point(260, 17);
             this.buttonAddEnd.Name = "buttonAddEnd";
-            this.buttonAddEnd.Size = new System.Drawing.Size(150, 44);
+            this.buttonAddEnd.Size = new System.Drawing.Size(75, 23);
             this.buttonAddEnd.TabIndex = 3;
             this.buttonAddEnd.Text = "Add End";
             this.buttonAddEnd.UseVisualStyleBackColor = true;
+            this.buttonAddEnd.Click += new System.EventHandler(this.buttonAddEnd_Click);
             // 
             // labelCustomerList
             // 
             this.labelCustomerList.AutoSize = true;
-            this.labelCustomerList.Location = new System.Drawing.Point(26, 184);
-            this.labelCustomerList.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelCustomerList.Location = new System.Drawing.Point(13, 96);
             this.labelCustomerList.Name = "labelCustomerList";
-            this.labelCustomerList.Size = new System.Drawing.Size(150, 25);
+            this.labelCustomerList.Size = new System.Drawing.Size(73, 13);
             this.labelCustomerList.TabIndex = 4;
             this.labelCustomerList.Text = "Customer List:";
             // 
@@ -94,46 +90,42 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxCustomerList.FormattingEnabled = true;
-            this.listBoxCustomerList.ItemHeight = 25;
-            this.listBoxCustomerList.Location = new System.Drawing.Point(26, 215);
-            this.listBoxCustomerList.Margin = new System.Windows.Forms.Padding(6);
+            this.listBoxCustomerList.Location = new System.Drawing.Point(13, 112);
             this.listBoxCustomerList.Name = "listBoxCustomerList";
-            this.listBoxCustomerList.Size = new System.Drawing.Size(1546, 629);
+            this.listBoxCustomerList.Size = new System.Drawing.Size(775, 329);
             this.listBoxCustomerList.TabIndex = 5;
             // 
             // labelPosition
             // 
             this.labelPosition.AutoSize = true;
-            this.labelPosition.Location = new System.Drawing.Point(758, 42);
-            this.labelPosition.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.labelPosition.Location = new System.Drawing.Point(379, 22);
             this.labelPosition.Name = "labelPosition";
-            this.labelPosition.Size = new System.Drawing.Size(95, 25);
+            this.labelPosition.Size = new System.Drawing.Size(47, 13);
             this.labelPosition.TabIndex = 6;
             this.labelPosition.Text = "Position:";
             // 
             // textBoxPosition
             // 
-            this.textBoxPosition.Location = new System.Drawing.Point(864, 37);
-            this.textBoxPosition.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxPosition.Location = new System.Drawing.Point(432, 19);
             this.textBoxPosition.Name = "textBoxPosition";
-            this.textBoxPosition.Size = new System.Drawing.Size(196, 31);
+            this.textBoxPosition.Size = new System.Drawing.Size(100, 20);
             this.textBoxPosition.TabIndex = 7;
             // 
             // buttonAddPosition
             // 
-            this.buttonAddPosition.Location = new System.Drawing.Point(1076, 33);
-            this.buttonAddPosition.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonAddPosition.Location = new System.Drawing.Point(538, 17);
             this.buttonAddPosition.Name = "buttonAddPosition";
-            this.buttonAddPosition.Size = new System.Drawing.Size(150, 44);
+            this.buttonAddPosition.Size = new System.Drawing.Size(75, 23);
             this.buttonAddPosition.TabIndex = 8;
             this.buttonAddPosition.Text = "Add Position";
             this.buttonAddPosition.UseVisualStyleBackColor = true;
             // 
             // buttonDeleteFirst
             // 
-            this.buttonDeleteFirst.Location = new System.Drawing.Point(358, 87);
+            this.buttonDeleteFirst.Location = new System.Drawing.Point(179, 45);
+            this.buttonDeleteFirst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDeleteFirst.Name = "buttonDeleteFirst";
-            this.buttonDeleteFirst.Size = new System.Drawing.Size(150, 44);
+            this.buttonDeleteFirst.Size = new System.Drawing.Size(75, 23);
             this.buttonDeleteFirst.TabIndex = 9;
             this.buttonDeleteFirst.Text = "Delete First";
             this.buttonDeleteFirst.UseVisualStyleBackColor = true;
@@ -141,9 +133,10 @@
             // 
             // buttonDeleteLast
             // 
-            this.buttonDeleteLast.Location = new System.Drawing.Point(520, 87);
+            this.buttonDeleteLast.Location = new System.Drawing.Point(260, 45);
+            this.buttonDeleteLast.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDeleteLast.Name = "buttonDeleteLast";
-            this.buttonDeleteLast.Size = new System.Drawing.Size(150, 44);
+            this.buttonDeleteLast.Size = new System.Drawing.Size(75, 23);
             this.buttonDeleteLast.TabIndex = 10;
             this.buttonDeleteLast.Text = "Delete Last";
             this.buttonDeleteLast.UseVisualStyleBackColor = true;
@@ -152,36 +145,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(682, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(341, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 25);
+            this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Delete by Name:";
             // 
             // textBoxDeleteByName
             // 
-            this.textBoxDeleteByName.Location = new System.Drawing.Point(865, 94);
-            this.textBoxDeleteByName.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxDeleteByName.Location = new System.Drawing.Point(432, 49);
             this.textBoxDeleteByName.Name = "textBoxDeleteByName";
-            this.textBoxDeleteByName.Size = new System.Drawing.Size(196, 31);
+            this.textBoxDeleteByName.Size = new System.Drawing.Size(100, 20);
             this.textBoxDeleteByName.TabIndex = 12;
             // 
             // buttonDeleteByName
             // 
-            this.buttonDeleteByName.Location = new System.Drawing.Point(1076, 89);
-            this.buttonDeleteByName.Margin = new System.Windows.Forms.Padding(6);
+            this.buttonDeleteByName.Location = new System.Drawing.Point(538, 46);
             this.buttonDeleteByName.Name = "buttonDeleteByName";
-            this.buttonDeleteByName.Size = new System.Drawing.Size(150, 44);
+            this.buttonDeleteByName.Size = new System.Drawing.Size(75, 23);
             this.buttonDeleteByName.TabIndex = 13;
             this.buttonDeleteByName.Text = "Delete";
             this.buttonDeleteByName.UseVisualStyleBackColor = true;
+            this.buttonDeleteByName.Click += new System.EventHandler(this.buttonDeleteByName_Click);
             // 
             // FormCustomerSingleLinkList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonDeleteByName);
             this.Controls.Add(this.textBoxDeleteByName);
             this.Controls.Add(this.label1);
@@ -196,7 +187,6 @@
             this.Controls.Add(this.buttonAddBegin);
             this.Controls.Add(this.textBoxCustomer);
             this.Controls.Add(this.labelCustomer);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormCustomerSingleLinkList";
             this.Text = "Customer Single Link List Demo";
             this.ResumeLayout(false);
