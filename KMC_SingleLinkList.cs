@@ -15,13 +15,15 @@
  * 0.2   KMC 09/29/2022 - added delete first
  *                      - added delete last
  *                      - added logic for delete by name
- * 0.3   KMC 10/03/2022 - finished logic for delete by name (spent around 4 hours on this
- *                      - only to figure out there was a deleteNode builtin...
+ * 0.3   KMC 10/03/2022 - finished logic for delete by name (spent around 4 hours on this only to realize how simple it was
+ *                      I made a for loop...)
  *                      - polished up logic for delete by name
  * 0.4   KMC 10/04/2022 - added DeleteNode method
  *                      - PROF QUESTION - When the pointer to your deleted node is out of scope, when does garbage collection delete it from memory?
- *                      - when the program ends? or as soon as the pointer goes out of scope?
+ *                        when the program ends? or as soon as the pointer goes out of scope?
  *                      - re-used DeleteNode method in delete first / delete last because of D.R.Y. Principle
+ *                      - added CountByTraversal method
+ *                      - added int count (basic)
  * 
  * *******************************************************************/
 using System;
@@ -37,14 +39,14 @@ namespace CustomerSingleLinkList
         #region properties
         public KMC_Node Top { get; set; }    // pointer top of link list
 
-        public int count;                    // will count nodes
+        public int count;                    // initialize count
         #endregion properties
 
         #region constructor
         public KMC_SingleLinkList()
         {
             Top = null;
-            count = 0;
+            count = 0;                      // set count to 0
         }
         #endregion constructor
 
@@ -54,7 +56,6 @@ namespace CustomerSingleLinkList
         /// the link list.
         /// </summary>
         /// <param name="lastname">Customer name</param>
-
         public void AddAtBeginning(String lastname)
         {
             // create a new node for the customer
@@ -67,7 +68,7 @@ namespace CustomerSingleLinkList
         }
 
         /// <summary>
-        /// This function add a customer at the end of the 
+        /// This function adds a customer at the end of the 
         /// link list
         /// </summary>
         /// <param name="lastname">Customer name</param>
@@ -103,7 +104,7 @@ namespace CustomerSingleLinkList
         /// <param name="lastname"></param>
         /// <param name="position"></param>
 
-        // we did not finish this in class *********************************************
+        // *****************************************we did not finish this in class *********************************************
         public void AddAtPosition(String lastname, int position)
         {
             KMC_Node current, previous;
@@ -146,7 +147,7 @@ namespace CustomerSingleLinkList
         }
 
         /// <summary>
-        /// This will delete the first node in the list no matter the value
+        /// This function will delete the first node in the list no matter the value
         /// </summary>
         public void DeleteFirst()
         {
@@ -155,12 +156,12 @@ namespace CustomerSingleLinkList
             {
                 return;
             }
-            // uses the delete method to delete the top-most node, and check for next
+            // uses the delete method to delete the top-most node, while also checking for next
             DeleteNode(Top, null);
             count--;
         }
         /// <summary>
-        /// This will delete the last node with any value in the link list
+        /// This function will delete the last node with any value in the link list
         /// </summary>
         public void DeleteLast()
         {
@@ -170,6 +171,7 @@ namespace CustomerSingleLinkList
                 return;
             }
 
+            // create a temp node, nodeToDelete
             KMC_Node nodeToDelete = Top, previous = null;
 
             while (nodeToDelete.Next != null)
@@ -191,7 +193,6 @@ namespace CustomerSingleLinkList
                 return;
             }
 
-            // set variables to null to mutate later
             KMC_Node nodeToDelete = Top, previous = null;
 
             // while there is a Next node, keep going

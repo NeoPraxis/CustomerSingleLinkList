@@ -17,11 +17,16 @@
  *                      - code Add Begin button
  * 0.3  KMC 10/01/2022  - added DeleteFirst button
  *                      - added DeleteLast button
- *                      - added DeleteByName button
+ *                      - added AddAtEnd Button (because we did not finish it in class)
+ *0.4   KMC 10/03/2022  - added DeleteByName button
  *                      - added count
  *                      - added count by traversal
- *                      - *** NOTICE WE DID NOT DO ADD AT END IN CLASS YET ***
- *0.4   KMC 10/03/2022  - added add at end button
+ *0.5   KMC 10/04/2022  - added DeleteNode method as per D.R.Y. Principle 
+ *                      - revised DeleteByName to implement DeleteNode method
+ *                      - revised DeleteFirst/Last to implement DeleteNode method
+ *                      - PROFESSOR NOTE: I made about 4 different methods for delete by name before
+ *                      deciding to keep the while loop one (I had to watch a few videos to better
+ *                      uderstand linked lists and how they function)
  * *******************************************************************/
 using System;
 using System.Windows.Forms;
